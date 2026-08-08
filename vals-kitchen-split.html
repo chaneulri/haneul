@@ -1,0 +1,577 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Val's Vegan Kitchen | Haneul Mo</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="vals-kitchen.css">
+</head>
+
+<body class="vals-page">
+  <header class="navbar">
+    <a href="index.html" class="logo">Haneul Mo</a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="project.html" class="active">Projects</a>
+      <a href="me.html">Me?</a>
+      <a href="littlethings.html">Little Things</a>
+    </nav>
+
+    <div class="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <main class="case-page">
+
+    <!-- HERO -->
+    <section class="case-hero vals-hero">
+      <div>
+        <p class="vals-kicker">MOBILE INVENTORY MANAGEMENT APP</p>
+        <h1>Val's Vegan Kitchen</h1>
+        <h2>UX/UI Design & Usability Testing</h2> 
+      </div>
+
+      <img src="images/vals-hero.png" alt="Val's Vegan Kitchen inventory app mockup">
+    </section>
+
+    <!-- ROLE / TOOLS / TIMELINE -->
+    <section class="case-info">
+      <div>
+        <h3>Role</h3>
+        <p>UX/UI Designer</p>
+      </div>
+
+      <div>
+        <h3>Tools</h3>
+        <p>Figma, Adobe Photoshop</p>
+      </div>
+
+      <div>
+        <h3>Context</h3>
+        <p>COGS 187A · Mobile App Project</p>
+      </div>
+    </section>
+
+    <!-- FULL-WIDTH PREVIEW -->
+    <section class="case-preview vals-preview">
+      <img src="images/vals-preview.png" alt="Preview of Val's Vegan Kitchen app screens">
+      <p>
+        Pictured above: a quick look at the dashboard, inventory, item details, and history screens.
+      </p>
+    </section>
+
+    <!-- OVERVIEW -->
+    <section class="case-section">
+      <h2>Overview</h2>
+      <p>
+        Val's Vegan Kitchen needed a mobile inventory management experience that could
+        support both restaurant managers and kitchen staff across multiple storage
+        locations and food categories.
+        <br><br>
+        The goal was to make common tasks—such as updating quantities, preparing weekly
+        orders, adding new ingredients, and reviewing inventory history—quick and
+        understandable in a fast-paced restaurant environment.
+      </p>
+    </section>
+
+    <!-- PROBLEM -->
+    <section class="case-section problem-card vals-problem">
+      <h2>Problem</h2>
+      <p>
+        Restaurant inventory work is repetitive and time-sensitive. Employees move through
+        walk-in freezers, refrigerators, and dry-storage areas while counting items, while
+        managers need to quickly identify shortages and prepare orders.
+        <br><br>
+        The app needed to help users:
+      </p>
+
+      <ul>
+        <li>update quantities after deliveries and weekly counts</li>
+        <li>identify low-stock items and calculate how much to order</li>
+        <li>add new ingredients and assign them to the correct location</li>
+        <li>review update history when inventory does not match</li>
+        <li>understand current quantity versus ideal quantity at a glance</li>
+      </ul>
+    </section>
+
+    <!-- CORE WORKFLOWS -->
+    <section class="case-section">
+      <h2>Core User Workflows</h2>
+      <p>
+        I designed the project around four realistic restaurant scenarios.
+      </p>
+
+      <div class="vals-workflow-grid">
+        <article class="vals-workflow-card">
+          <i class="fa-solid fa-box-open"></i>
+          <h3>Update a Delivery</h3>
+          <p>Find an item, increase its quantity, save the change, and record the update.</p>
+        </article>
+
+        <article class="vals-workflow-card">
+          <i class="fa-solid fa-cart-shopping"></i>
+          <h3>Prepare an Order</h3>
+          <p>Identify low-stock items and compare current quantities with ideal stock.</p>
+        </article>
+
+        <article class="vals-workflow-card">
+          <i class="fa-solid fa-plus"></i>
+          <h3>Add an Ingredient</h3>
+          <p>Create a new item and assign its category, location, quantity, and unit.</p>
+        </article>
+
+        <article class="vals-workflow-card">
+          <i class="fa-solid fa-clock-rotate-left"></i>
+          <h3>Check History</h3>
+          <p>Investigate when an item was last updated and who made the change.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- INFORMATION ARCHITECTURE DECISION -->
+    <section class="case-section">
+      <h2>Design Challenge</h2>
+      <p>
+        One of my biggest decisions was whether the inventory should be organized by
+        food category or by storage location.
+      </p>
+
+      <div class="vals-decision-grid">
+        <article class="vals-decision-card">
+          <span class="vals-choice-label">OPTION 1</span>
+          <h3>Organize by Category</h3>
+          <ul>
+            <li>useful when reviewing similar foods together</li>
+            <li>helpful for managers preparing purchase orders</li>
+            <li>requires staff to move back and forth between storage areas</li>
+          </ul>
+        </article>
+
+        <article class="vals-decision-card chosen">
+          <span class="vals-choice-label">CHOSEN DEFAULT</span>
+          <h3>Organize by Location</h3>
+          <ul>
+            <li>matches how staff physically conduct inventory counts</li>
+            <li>reduces unnecessary navigation</li>
+            <li>allows employees to finish one storage area at a time</li>
+          </ul>
+        </article>
+      </div>
+      <br><br>
+      <p>
+        I selected location as the default view because it better supports the real-world
+        counting process. A sorting option still allows managers to switch to category view
+        when needed.
+      </p>
+    </section>
+
+    <!-- COMPETITIVE ANALYSIS -->
+    <section class="case-section">
+      <h2>Competitive Analysis</h2>
+      <p>
+        I reviewed Pantry Check, Your Food, KitchenPal, and SubVentory to understand how
+        existing inventory products organize information, communicate stock levels, and
+        support common inventory tasks.
+      </p>
+
+      <div class="analysis-grid vals-analysis-grid">
+        <div class="analysis-card vals-analysis-card">
+          <h3>What Worked</h3>
+          <ul>
+            <li>confirmation feedback after completing actions</li>
+            <li>simple quantity controls</li>
+            <li>history and timeline views</li>
+            <li>clear visual indicators for clickable rows</li>
+          </ul>
+        </div>
+
+        <div class="analysis-card vals-analysis-card">
+          <h3>Opportunities</h3>
+          <ul>
+            <li>better support for location-based restaurant workflows</li>
+            <li>more visible low-stock information</li>
+            <li>clearer current-versus-ideal quantities</li>
+            <li>easier access to item details and update history</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <!-- INITIAL DESIGNS -->
+    <section class="case-section">
+      <h2>Initial Designs</h2>
+      <p>
+        The first prototype included a dashboard with low-stock alerts, an inventory page
+        organized by location, and an Add Item form using dropdowns to reduce input errors.
+      </p>
+
+      <div class="vals-screen-pair">
+        <figure>
+          <img src="images/vals-initial-dashboard.png" alt="Initial dashboard design">
+          <figcaption>Initial Dashboard</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/vals-initial-add-item.png" alt="Initial add item design">
+          <figcaption>Initial Add Item Screen</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- USER TESTING -->
+    <section class="case-section vals-testing-section">
+      <div class="vals-testing-copy">
+        <h2>User Testing</h2>
+        <p>
+          I conducted think-aloud usability testing with four participants. Each participant
+          completed one restaurant scenario while I observed where they clicked, hesitated,
+          became confused, and whether they could finish without assistance.
+        </p>
+
+        <div class="vals-testing-stats">
+          <div><strong>4</strong><span>Participants</span></div>
+          <div><strong>4</strong><span>Task Scenarios</span></div>
+          <div><strong>3</strong><span>Major Issues</span></div>
+        </div>
+      </div>
+
+      <img src="images/vals-testing.png" alt="Usability testing scenarios and notes">
+    </section>
+
+    <!-- KEY FINDINGS -->
+    <section class="case-section">
+      <h2>Key Findings</h2>
+
+      <div class="vals-findings">
+        <article class="vals-finding">
+          <span>01</span>
+          <div>
+            <h3>Low-stock alerts were easy to overlook.</h3>
+            <p>
+              A participant scanned the dashboard for several seconds and opened a category
+              before noticing the alert area.
+            </p>
+          </div>
+        </article>
+
+        <article class="vals-finding">
+          <span>02</span>
+          <div>
+            <h3>Users wanted confirmation after saving.</h3>
+            <p>
+              Participants were unsure whether a quantity update or newly added item had
+              been successfully saved.
+            </p>
+          </div>
+        </article>
+
+        <article class="vals-finding">
+          <span>03</span>
+          <div>
+            <h3>Inventory rows did not appear clickable.</h3>
+            <p>
+              A participant searched through the bottom navigation because they did not
+              realize an inventory item opened a detailed page.
+            </p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- REDESIGN 1 -->
+    <section class="case-section vals-redesign">
+      <div class="vals-redesign-copy">
+        <p class="vals-section-label">REDESIGN 01</p>
+        <h2>Making Low-Stock Alerts More Visible</h2>
+        <p>
+          The original alert used a color palette similar to the rest of the dashboard, so it
+          blended into the page. I changed it to a stronger red, increased spacing around it,
+          and strengthened the visual hierarchy so urgent items receive immediate attention.
+        </p>
+      </div>
+
+      <div class="vals-before-after">
+        <figure>
+          <img src="images/vals-low-stock-before.png" alt="Initial low stock alert design">
+          <figcaption>Before</figcaption>
+        </figure>
+
+        <i class="fa-solid fa-arrow-right-long"></i>
+
+        <figure>
+          <img src="images/vals-low-stock-after.png" alt="Redesigned low stock alert">
+          <figcaption>After</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REDESIGN 2 -->
+    <section class="case-section vals-redesign">
+      <div class="vals-redesign-copy">
+        <p class="vals-section-label">REDESIGN 02</p>
+        <h2>Providing Clear Confirmation Feedback</h2>
+        <p>
+          The original workflow ended on the Add Item screen after the user tapped Save.
+          I added a success screen that confirms the action and provides a direct path to
+          the newly created item's details.
+        </p>
+      </div>
+
+      <div class="vals-three-screen">
+        <figure>
+          <img src="images/vals-add-item.png" alt="Add item screen">
+          <figcaption>Add Item</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/vals-confirmation.png" alt="Item added confirmation screen">
+          <figcaption>Confirmation</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/vals-item-details.png" alt="Item details screen">
+          <figcaption>Item Details</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- REDESIGN 3 -->
+    <section class="case-section vals-redesign">
+      <div class="vals-redesign-copy">
+        <p class="vals-section-label">REDESIGN 03</p>
+        <h2>Making Inventory Items Feel Clickable</h2>
+        <p>
+          I tested both pencil icons and chevrons. The pencil suggested editing, while the
+          chevron clearly communicated navigation to another screen. I selected the chevron
+          because participants immediately understood that more information was available.
+        </p>
+      </div>
+
+      <div class="vals-before-after">
+        <figure>
+          <img src="images/vals-inventory-before.png" alt="Inventory list without chevrons">
+          <figcaption>Before</figcaption>
+        </figure>
+
+        <i class="fa-solid fa-arrow-right-long"></i>
+
+        <figure>
+          <img src="images/vals-inventory-after.png" alt="Inventory list with chevrons">
+          <figcaption>After</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- FINAL WORKFLOWS -->
+    <section class="case-section">
+      
+     
+    <div class="vals-final-workflow">
+      <h2>Final Workflows</h2>
+     <h3>Preparing the Weekly Order</h3>
+      <p>
+        The final prototype supports both manager and employee needs while reducing
+        searching and manual calculations.
+      </p>
+
+      <div class="workflow-images">
+
+    <img src="images/dashboard1.png">
+
+    <span class="workflow-arrow">
+        <i class="fa-solid fa-arrow-right"></i>
+    </span>
+
+    <img src="images/dashboard2.png">
+
+    <span class="workflow-arrow">
+        <i class="fa-solid fa-arrow-right"></i>
+    </span>
+
+    <img src="images/dashboard3.png">
+
+</div>
+</div>
+<br><br><br><br><br><br><br>
+<div class="vals-final-workflow">
+
+        <h3>Completing the Weekly Inventory Count</h3>
+
+        <p>
+          Employees can move through one storage location at a time, expand its inventory,
+          and update quantities using simple dropdown controls.
+        </p>
+    <div class="workflow-images">
+
+    <img src="images/dashboard4.png">
+
+    <span class="workflow-arrow">
+        <i class="fa-solid fa-arrow-right"></i>
+    </span>
+
+    <img src="images/dashboard5.png">
+
+    <span class="workflow-arrow">
+        <i class="fa-solid fa-arrow-right"></i>
+    </span>
+
+    <img src="images/dashboard6.png">
+
+    </div>
+    </div>
+    </div>
+    </section>
+
+    <!-- FINAL DESIGN -->
+    <section class="case-section">
+      <h2>Final Design</h2>
+      <p>
+        The final design includes a dashboard, location-based inventory view, item details,
+        history tracking, low-stock ordering support, and tools for adding items and storage
+        locations.
+      </p>
+
+      <div class="vals-final-grid">
+        <figure>
+          <img src="images/vals-final-dashboard.png" alt="Final dashboard design">
+          <figcaption>Dashboard</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/vals-final-inventory.png" alt="Final inventory design">
+          <figcaption>Inventory</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/vals-final-history.png" alt="Final history design">
+          <figcaption>History</figcaption>
+        </figure>
+
+        <figure>
+          <img src="images/vals-final-details.png" alt="Final item details design">
+          <figcaption>Item Details</figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- PROTOTYPE -->
+    <section class="case-section">
+      <h2>Interactive Prototype</h2>
+      <p>
+        Experience the final prototype by completing common inventory management tasks, 
+        including updating stock, adding ingredients, reviewing history, and checking low-stock alerts.
+      </p>
+
+      <h3 class="try-me vals-try-me">TRY ME</h3>
+
+      <div class="vals-prototype-embed">
+        <iframe
+          src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/ChVf4vKAq27nUnBiHlFRaG/Val-s-Vegan-Kitchen---Portfolio-Prototype?node-id=0-1&t=dveMmmSdZzSPiCNk-1"
+          title="Val's Vegan Kitchen Figma prototype">
+        </iframe>
+      </div>
+
+      <p class="image-caption">
+        Interactive preview of the final mobile-app prototype.
+      </p>
+
+      <div class="live-site">
+        <a href="https://www.figma.com/proto/ChVf4vKAq27nUnBiHlFRaG/Val-s-Vegan-Kitchen---Portfolio-Prototype?node-id=0-1&t=dveMmmSdZzSPiCNk-1" target="_blank" class="visit-btn1 vals-prototype-link">
+          Open in Figma
+          <i class="fa-solid fa-arrow-up-right-from-square"></i>
+        </a>
+      </div>
+    </section>
+
+    <!-- REFLECTION -->
+    <section class="case-section">
+      <h2>Reflection</h2>
+      <p>
+        This project showed me how strongly information architecture affects the usability
+        of a workflow. Organizing inventory by location was not simply a visual choice—it
+        came directly from understanding how employees physically move through a restaurant.
+        <br><br>
+        User testing also reminded me that a design can appear clear to its creator while
+        still hiding important interactions from other people. The low-stock alert,
+        confirmation screen, History page, and chevron indicators were all shaped by moments
+        where participants behaved differently from what I expected.
+      </p>
+    </section>
+
+    <!-- FUTURE DIRECTIONS -->
+  <section class="case-section vals-future">
+  <h2>Future Directions</h2>
+
+  <p>
+    Although the prototype successfully addressed the primary usability issues,
+    there are several opportunities for future improvement:
+  </p>
+
+  <ul>
+    <li>Barcode scanning for faster inventory updates.</li>
+    <li>Smart notifications for low stock and expiring items.</li>
+    <li>Recipe integration with automatic inventory deduction.</li>
+    <li>Role-based permissions for different staff members.</li>
+    <li>Analytics to support purchasing decisions.</li>
+  </ul>
+</section>
+
+    <!-- CASE NAVIGATION -->
+    <section class="case-navigation">
+      <div class="nav-links">
+        <a href="project.html" class="text-link">
+          <i class="fa-solid fa-arrow-left"></i>
+          All Projects
+        </a>
+
+        <a href="#" class="text-link">
+          Next Project
+          <i class="fa-solid fa-arrow-right"></i>
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer id="contact">
+    <p>© 2026 by Haneul Mo</p>
+
+    <div class="footer-info">
+      <div>
+        <h4>Call</h4>
+        <p>123-456-7890</p>
+      </div>
+
+      <div>
+        <h4>Email</h4>
+        <p>info@mysite.com</p>
+      </div>
+
+      <div>
+        <h4>Follow</h4>
+        <div class="social-icons">
+          <a href="https://github.com/YOURUSERNAME" target="_blank" aria-label="GitHub">
+            <i class="fa-brands fa-github"></i>
+          </a>
+          <a href="https://linkedin.com/in/YOURUSERNAME" target="_blank" aria-label="LinkedIn">
+            <i class="fa-brands fa-linkedin-in"></i>
+          </a>
+          <a href="https://instagram.com/YOURUSERNAME" target="_blank" aria-label="Instagram">
+            <i class="fa-brands fa-instagram"></i>
+          </a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,710 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  font-family: 'Poppins', sans-serif;
+  color: #1f1f1f;
+  background: #fff;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+
+  width: 100%;
+  min-height: 100px;
+  padding: 0 55px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: rgba(255, 255, 255, 0.96);
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+  font-size: 20px;
+  font-weight: 700;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  gap: 24px;
+}
+
+nav a {
+  font-size: 14px;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+  text-transform: uppercase;
+  transition: color 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+  color: #ff5f82;
+}
+
+.hamburger {
+  display: none;
+  font-size: 24px;
+  cursor: pointer;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+  min-height: 560px;
+  padding: 110px 8%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: #f7f0eb;
+}
+
+.hero h1 {
+    font-size: clamp(64px, 9vw, 120px);
+    font-weight: 700;
+    line-height: 1;
+    letter-spacing: -4px;
+
+    opacity: 0;
+    animation: fadeUp .9s ease forwards;
+}
+
+.hero-subtitle {
+    margin-top: 30px;
+
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 300;
+    line-height: 1.8;
+
+    color: #555;
+    opacity: 0;
+    animation: fadeUp .8s ease forwards;
+    animation-delay: .6s;
+}
+
+
+/* =========================
+   SHARED SECTION
+========================= */
+
+.section {
+  width: min(1100px, 88%);
+  margin: 0 auto;
+  padding: 130px 0;
+}
+
+.section h2 {
+  margin-bottom: 35px;
+
+  font-size: clamp(32px, 4vw, 48px);
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.section p {
+  margin-bottom: 24px;
+
+  font-size: 17px;
+  font-weight: 300;
+  line-height: 1.9;
+
+  color: #444;
+}
+
+.section p:last-child {
+  margin-bottom: 0;
+}
+
+.narrow {
+  width: min(780px, 88%);
+}
+
+
+/* =========================
+   RIGHT NOW
+========================= */
+.right-now-section {
+    position: relative;
+    min-height: 850px;
+    padding: 180px 8%;
+    overflow: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    background: #ffffff;
+}
+
+/* =========================
+   STICKY NOTE
+========================= */
+
+/* =========================
+   STICKY NOTE
+========================= */
+
+.sticky-note {
+    position: relative;
+    z-index: 2;
+
+    width: min(760px, 90%);
+    padding: 75px 70px;
+
+    background:
+        radial-gradient(rgba(115, 91, 59, 0.025) 1px, transparent 1px),
+        linear-gradient(180deg, #fffbed 0%, #fcf3d5 100%);
+
+    background-size: 8px 8px, auto;
+
+    border-radius: 3px;
+
+    box-shadow:
+        0 28px 55px rgba(57, 44, 31, 0.12),
+        0 4px 8px rgba(57, 44, 31, 0.06);
+
+    transform: rotate(-1.5deg);
+}
+
+.sticky-note h2 {
+    margin-bottom: 32px;
+
+    font-size: clamp(36px, 5vw, 50px);
+    font-weight: 600;
+}
+
+.sticky-note p {
+    margin-bottom: 24px;
+
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.9;
+
+    color: #45413d;
+}
+
+.sticky-note p:last-child {
+    margin-bottom: 0;
+}
+
+.sticky-note .location {
+    font-weight: 500;
+}
+
+
+/* =========================
+   TAPE
+========================= */
+
+.tape {
+    position: absolute;
+
+    width: 105px;
+    height: 30px;
+
+    background: rgba(255, 255, 255, 0.68);
+    border: 1px solid rgba(225, 215, 205, 0.55);
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+
+    backdrop-filter: blur(2px);
+}
+
+.top-left {
+    top: -13px;
+    left: 30px;
+    transform: rotate(-18deg);
+}
+
+.top-right {
+    top: -13px;
+    right: 30px;
+    transform: rotate(18deg);
+}
+
+.bottom-left {
+    bottom: -13px;
+    left: 30px;
+    transform: rotate(16deg);
+}
+
+.bottom-right {
+    right: 30px;
+    bottom: -13px;
+    transform: rotate(-16deg);
+}
+
+
+/* =========================
+   SAKURA DECORATIONS
+========================= */
+
+.sakura {
+    position: absolute;
+    z-index: 1;
+
+    color: rgba(239, 164, 185, 0.28);
+
+    font-family: Georgia, serif;
+    line-height: 1;
+
+    pointer-events: none;
+    user-select: none;
+}
+
+.sakura-one {
+    top: 90px;
+    left: 8%;
+    font-size: 95px;
+    transform: rotate(-18deg);
+}
+
+.sakura-two {
+    top: 185px;
+    right: 10%;
+    font-size: 58px;
+    transform: rotate(22deg);
+}
+
+.sakura-three {
+    bottom: 105px;
+    left: 13%;
+    font-size: 66px;
+    transform: rotate(16deg);
+}
+
+.sakura-four {
+    right: 7%;
+    bottom: 55px;
+    font-size: 110px;
+    transform: rotate(-12deg);
+}
+
+.sakura-five {
+    top: 48%;
+    left: 4%;
+    font-size: 34px;
+    transform: rotate(30deg);
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+    .right-now-section {
+        min-height: auto;
+        padding: 130px 7%;
+    }
+
+    .sticky-note {
+        width: 100%;
+        padding: 58px 34px;
+
+        transform: rotate(-0.8deg);
+    }
+
+    .sticky-note h2 {
+        margin-bottom: 25px;
+        font-size: 34px;
+    }
+
+    .sticky-note p {
+        font-size: 15px;
+        line-height: 1.85;
+    }
+
+    .tape {
+        width: 72px;
+        height: 23px;
+    }
+
+    .top-left,
+    .bottom-left {
+        left: 16px;
+    }
+
+    .top-right,
+    .bottom-right {
+        right: 16px;
+    }
+
+    .sakura-one {
+        top: 50px;
+        left: -10px;
+        font-size: 65px;
+    }
+
+    .sakura-two {
+        top: 95px;
+        right: -5px;
+        font-size: 40px;
+    }
+
+    .sakura-three {
+        bottom: 50px;
+        left: 5px;
+        font-size: 42px;
+    }
+
+    .sakura-four {
+        right: -20px;
+        bottom: 10px;
+        font-size: 75px;
+    }
+
+    .sakura-five {
+        display: none;
+    }
+}
+
+
+/* =========================
+   STORY / CHILDHOOD
+========================= */
+
+.story {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 85px;
+  align-items: center;
+}
+
+.story-image img {
+  width: 100%;
+  max-height: 600px;
+
+  object-fit: cover;
+
+  border-radius: 24px;
+  box-shadow: 0 22px 45px rgba(0, 0, 0, 0.1);
+}
+
+.story-text h2 {
+  margin-bottom: 30px;
+}
+
+
+/* =========================
+   ENDING
+========================= */
+
+.ending {
+  min-height: 420px;
+  padding: 100px 8%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  text-align: center;
+
+  background: #f7f0eb;
+}
+
+.ending h2 {
+  font-size: clamp(42px, 6vw, 72px);
+  font-weight: 500;
+  letter-spacing: -2px;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  width: 100%;
+  min-height: 130px;
+  padding: 35px 70px;
+
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  background: #fff;
+  border-top: 1px solid #ececec;
+}
+
+footer > p {
+  font-size: 14px;
+  color: #444;
+}
+
+.footer-info {
+  display: flex;
+  gap: 80px;
+  text-align: center;
+}
+
+.footer-info h4 {
+  margin-bottom: 8px;
+
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-info p {
+  margin: 0;
+
+  font-size: 14px;
+  line-height: 1.4;
+
+  color: #555;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-icons a {
+  font-size: 18px;
+  color: #222;
+
+  transition:
+    color 0.25s ease,
+    transform 0.25s ease;
+}
+
+.social-icons a:hover {
+  color: #ff5f82;
+  transform: translateY(-2px);
+}
+
+
+/* =========================
+   TABLET
+========================= */
+
+@media (max-width: 900px) {
+  .section {
+    padding: 100px 0;
+  }
+
+  .story {
+    grid-template-columns: 1fr;
+    gap: 50px;
+  }
+
+  .story-image {
+    max-width: 620px;
+    margin: 0 auto;
+  }
+
+  .story-text {
+    text-align: left;
+  }
+
+  .footer-info {
+    gap: 45px;
+  }
+}
+
+
+/* =========================
+   MOBILE NAVIGATION
+========================= */
+
+@media (max-width: 650px) {
+  .navbar {
+    min-height: 76px;
+    padding: 18px 24px;
+  }
+
+  .logo {
+    font-size: 20px;
+  }
+
+  .hamburger {
+    display: block;
+  }
+
+  nav {
+    position: absolute;
+    top: 76px;
+    right: 20px;
+
+    width: 205px;
+    padding: 24px;
+
+    display: none;
+    flex-direction: column;
+    align-items: flex-end;
+    gap: 20px;
+
+    background: #fff;
+    border-radius: 0 0 18px 18px;
+    box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+  }
+
+  nav.show {
+    display: flex;
+  }
+
+  nav a {
+    font-size: 13px;
+    text-align: right;
+  }
+
+
+  /* HERO */
+
+  .hero {
+    min-height: 470px;
+    padding: 90px 7%;
+  }
+
+  .hero h1 {
+    letter-spacing: -2px;
+    animation:fadeUp .8s ease forwards;
+  }
+  
+
+  .hero-subtitle {
+    margin-top: 24px;
+    font-size: 17px;
+    opacity:0;
+    animation:fadeUp .8s ease forwards;
+    animation-delay:.35s;
+  }
+
+
+  /* SECTIONS */
+
+  .section,
+  .narrow {
+    width: 86%;
+    padding: 85px 0;
+  }
+
+  .section h2 {
+    margin-bottom: 28px;
+    font-size: 30px;
+  }
+
+  .section p {
+    font-size: 15px;
+    line-height: 1.85;
+  }
+
+
+  /* CURRENT */
+
+  .current-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+    margin-top: 38px;
+  }
+
+  .current-item {
+    min-height: auto;
+    padding: 28px 24px;
+  }
+
+
+  /* STORY */
+
+  .story {
+    gap: 38px;
+  }
+
+  .story-image img {
+    max-height: 450px;
+    border-radius: 18px;
+  }
+
+
+  /* ENDING */
+
+  .ending {
+    min-height: 320px;
+    padding: 75px 7%;
+  }
+
+  .ending h2 {
+    font-size: 42px;
+  }
+
+
+  /* FOOTER */
+
+  footer {
+    min-height: auto;
+    padding: 34px 24px;
+
+    flex-direction: column;
+    gap: 28px;
+
+    text-align: center;
+  }
+
+  footer > p {
+    font-size: 12px;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .footer-info h4,
+  .footer-info p {
+    font-size: 13px;
+  }
+}
+@keyframes fadeUp {
+
+    from {
+        opacity: 0;
+        transform: translateY(25px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+
+}

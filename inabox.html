@@ -1,0 +1,331 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>In a Box | Haneul Mo</title>
+  <link rel="icon" type="image/png" href="images/favicon.png">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <header class="navbar">
+    <a href="index.html" class="logo">Haneul Mo</a>
+
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="project.html" class="active">Projects</a>
+      <a href="me.html">Me?</a>
+      <a href="littlethings.html">Little Things</a>
+    </nav>
+
+    <div class="hamburger">
+      <i class="fa-solid fa-bars"></i>
+    </div>
+  </header>
+
+  <main class="case-page">
+
+    <section class="case-hero">
+      <div>
+        <h1>In a Box</h1>
+        <h2>UX/UI Design & Front-End Development</h2>
+        <p>Designing a modern meal-kit browsing experience</p>
+      </div>
+
+      <img src="images/inabox_mockup.png" alt="In a Box website mockup">
+    </section>
+    
+    <section class="case-info">
+      <div>
+        <h3>Role</h3>
+        <p>UX/UI Designer & Front-End Developer</p>
+      </div>
+
+      <div>
+        <h3>Tools</h3>
+        <p>Balsamiq, SmartDraw, HTML, CSS, Bootstrap, Sublime Text</p>
+      </div>
+
+      <div>
+        <h3>Timeline</h3>
+        <p>5 weeks</p>
+      </div>
+    </section>
+
+    <section class="case-preview">
+  <img src="images/inabox-preview.png" alt="Preview of In a Box homepage and packages page">
+  <p>Pictured above: a quick glance of the home page and packages page for In a Box website.</p>
+</section>
+
+    <section class="case-section">
+      <h2>Overview</h2>
+      <p>
+        In a Box is a conceptual meal-kit delivery website created for a website
+        development project. The goal was to design and develop a modern,
+        responsive platform where users could explore recipe guides, meal plans,
+        bake-at-home kits, ingredients, and customizable food packages. <br><br>
+        The project focused on improving usability, accessibility, responsive layouts, 
+        and clear navigation while creating an engaging browsing experience for users across different devices and screen sizes.
+      </p>
+    </section>
+    
+    <section class="case-section problem-card">
+      <h2>Problem</h2>
+      <p>
+        The client wanted a website that could clearly display the company’s
+        growing range of products and services while remaining easy to navigate
+        and visually appealing.
+        <br><br>
+        The website needed to:
+      </p>
+      
+      <ul>
+        <li>showcase recipe guides and meal kits</li>
+        <li>organize multiple product categories clearly</li>
+        <li>support responsive viewing across devices</li>
+        <li>provide useful information for customers</li>
+        <li>maintain a modern and attractive appearance</li>
+      </ul>
+    </section>
+    <br><br><br>
+
+    <section class="case-section">
+  <h2>Competitive Analysis</h2>
+  <p>
+    Before designing the website, I analyzed existing meal-kit services including
+    HelloFresh and Blue Apron to understand how successful platforms structure
+    navigation, layouts, responsiveness, and product discovery.
+  </p>
+
+  <div class="analysis-grid">
+    <div class="analysis-card">
+      <h3>HelloFresh</h3>
+      <h4>Strengths</h4>
+      <ul>
+        <li>Clean and visually engaging layout</li>
+        <li>Strong branding and consistent color palette</li>
+        <li>Clear call-to-action buttons</li>
+        <li>Responsive mobile experience</li>
+      </ul>
+
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Some navigation items disappeared on tablet view</li>
+        <li>No search functionality for recipes</li>
+      </ul>
+    </div>
+
+    <div class="analysis-card">
+      <h3>Blue Apron</h3>
+      <h4>Strengths</h4>
+      <ul>
+        <li>Consistent responsiveness across browsers and devices</li>
+        <li>Organized navigation structure</li>
+        <li>Clear meal categorization</li>
+      </ul>
+
+      <h4>Weaknesses</h4>
+      <ul>
+        <li>Limited filtering and search functionality</li>
+        <li>Fewer customization options compared to competitors</li>
+      </ul>
+    </div>
+  </div>
+  <br>
+  <br>
+  <p>
+    These observations helped guide my own design decisions, 
+    especially around responsive navigation, category organization, and visual consistency. 
+  </p>
+</section>
+
+<section class="case-section">
+  <h2>Information Architecture</h2>
+  <p>
+    To organize the website’s large amount of content, I created a sitemap that
+    structured the website into clear categories including recipe guides,
+    bake-at-home sets, ingredients, packages, and contact pages.
+    <br><br>
+    The structure was designed to help users quickly browse different product 
+    categories while maintaining simple and intuitive navigation.
+  </p>
+  <p class="image-caption">Home Page Site Map</p>
+  <img 
+  class="case-image clickable-image" 
+  src="images/inabox-sitemap.png" 
+  alt="In a Box sitemap"
+  id="openWorkflow"
+>
+
+<a href="#" class="workflow-link" id="openWorkflowLink">
+  Additional User Flows
+</a>
+
+<div class="workflow-modal" id="workflowModal">
+  <button class="modal-close" id="closeWorkflow">&times;</button>
+
+  <button class="modal-arrow left" id="prevFlow">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+
+  <div class="modal-content">
+    <img id="workflowImage" src="images/userflow-home.png" alt="User flow image">
+    <div class="modal-bottom">
+      <p id="workflowLabel">Home</p>
+      <p id="workflowCounter">1/7</p>
+    </div>
+  </div>
+
+  <button class="modal-arrow right" id="nextFlow">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>
+</section>
+
+<section class="case-section wireframe-section">
+  <div>
+    <h2>Wireframing</h2>
+    <p>
+      Low-fidelity wireframes were created to plan content hierarchy, page
+      layouts, navigation placement, and user interactions before development began.
+      <br><br>
+      The wireframes focused on:
+    </p>
+
+    <ul>
+      <li>clear visual hierarchy</li>
+      <li>card-based layouts</li>
+      <li>responsive spacing</li>
+      <li>accessible navigation</li>
+      <li>consistent footer and menu placement</li>
+    </ul>
+  </div>
+
+  <div class="wireframe-gallery">
+  <button class="wireframe-arrow left" id="prevWireframe">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+
+  <img 
+    id="wireframePreview"
+    src="images/wireframe-home.png"
+    alt="Wireframe preview"
+  >
+
+  <button class="wireframe-arrow right" id="nextWireframe">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>
+
+<div class="wireframe-modal" id="wireframeModal">
+  <button class="wireframe-close" id="closeWireframe">&times;</button>
+
+  <button class="wireframe-modal-arrow left" id="prevWireframeModal">
+    <i class="fa-solid fa-chevron-left"></i>
+  </button>
+
+  <img 
+    id="wireframeModalImage"
+    src="images/wireframe-home.png"
+    alt="Expanded wireframe"
+  >
+
+  <button class="wireframe-modal-arrow right" id="nextWireframeModal">
+    <i class="fa-solid fa-chevron-right"></i>
+  </button>
+</div>
+</section>
+
+    <section class="case-section">
+      <h2>Final Website</h2>
+      <p>
+        After completing the planning and wireframing stages, the final website
+        was developed with a focus on usability, organization, and responsive design.
+        The final implementation transformed the low-fidelity wireframes into a polished 
+        browsing experience with improved navigation and visual consistency across pages.
+      </p>
+      <br><br><br>
+      <h3 class="try-me">TRY ME</h3>
+
+      <div class="website-embed">
+        <iframe 
+          src="https://chaneulri.github.io/in-a-box-website/"
+          title="In a Box Website Preview">
+        </iframe>
+      </div>
+      <p class="image-caption">
+      Interactive preview of the completed responsive website.
+      </p>
+
+      <div class="live-site">
+  <a href="https://chaneulri.github.io/in-a-box-website/" target="_blank" class="visit-btn1">
+    View Live Website <i class="fa-solid fa-arrow-up-right-from-square"></i>
+  </a>
+</div>
+    </section>
+
+    <section class="case-section">
+      <h2>Reflection</h2>
+      <p>
+        Working on this project helped me better understand the relationship
+        between visual organization and usability in web design. Through building
+        the sitemap, wireframes, and final website, I learned how small layout
+        and navigation decisions can significantly impact the user experience.
+        This project also gave me more confidence in combining both design planning 
+        and front-end development using HTML and CSS.
+      </p>
+    </section>
+
+    <section class="case-navigation">
+
+    <div class="nav-links">
+
+        <a href="project.html" class="text-link">
+            <i class="fa-solid fa-arrow-left"></i>
+            All Projects
+        </a>
+
+        <a href="vals-kitchen-split.html" class="text-link">
+            Next Project
+            <i class="fa-solid fa-arrow-right"></i>
+        </a>
+
+    </div>
+
+</section>
+  </main>
+
+  <footer id="contact">
+    <p>© 2026 by Haneul Mo</p>
+
+    <div class="footer-info">
+      <div>
+        <h4>Call</h4>
+        <p>123-456-7890</p>
+      </div>
+
+      <div>
+        <h4>Email</h4>
+        <p>info@mysite.com</p>
+      </div>
+
+      <div>
+        <h4>Follow</h4>
+        <div class="social-icons">
+          <a href="https://github.com/YOURUSERNAME" target="_blank"><i class="fa-brands fa-github"></i></a>
+          <a href="https://linkedin.com/in/YOURUSERNAME" target="_blank"><i class="fa-brands fa-linkedin-in"></i></a>
+          <a href="https://instagram.com/YOURUSERNAME" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
