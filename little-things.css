@@ -1,0 +1,424 @@
+/* =========================
+   GENERAL
+========================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+    color: #1f1f1f;
+    background: #faf7f4;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+
+/* =========================
+   NAVBAR
+========================= */
+
+.navbar {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    width: 100%;
+    min-height: 100px;
+    padding: 0 55px;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    background: rgba(255, 255, 255, 0.96);
+    border-bottom: 1px solid #f0f0f0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 24px;
+}
+
+nav a {
+    font-size: 14px;
+    font-weight: 300;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+
+    transition: color 0.25s ease;
+}
+
+nav a:hover,
+nav a.active {
+    color: #ff5f82;
+}
+
+.hamburger {
+    display: none;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+
+/* =========================
+   LITTLE THINGS PAGE
+========================= */
+
+.little-things-page {
+    min-height: calc(100vh - 100px);
+
+    padding: 120px 8% 140px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.little-things-inner {
+    width: min(900px, 100%);
+    text-align: center;
+}
+
+
+/* eyebrow */
+
+.eyebrow {
+    margin-bottom: 22px;
+
+    font-size: 14px;
+    font-weight: 400;
+    letter-spacing: 5px;
+
+    color: #665c55;
+}
+
+
+/* title */
+
+.little-things-inner h1 {
+    margin-bottom: 24px;
+
+    font-size: clamp(68px, 10vw, 120px);
+    font-weight: 700;
+    line-height: 1;
+
+    letter-spacing: -5px;
+}
+
+
+/* subtitle */
+
+.intro {
+    margin-bottom: 42px;
+
+    font-size: clamp(18px, 2vw, 24px);
+    font-weight: 300;
+    line-height: 1.7;
+
+    color: #555;
+}
+
+
+/* =========================
+   LITTLE TAGS
+========================= */
+
+.things-list {
+    max-width: 760px;
+    margin: 0 auto 80px;
+
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+}
+
+.things-list span {
+    padding: 10px 17px;
+
+    font-size: 13px;
+    font-weight: 300;
+
+    color: #5f5650;
+    background: #fff;
+
+    border: 1px solid #eadfd9;
+    border-radius: 100px;
+
+    box-shadow: 0 6px 18px rgba(70, 50, 40, 0.04);
+}
+
+
+/* =========================
+   WIP NOTE
+========================= */
+
+.wip-note {
+    position: relative;
+
+    width: min(520px, 90%);
+    margin: 0 auto;
+
+    padding: 55px 45px;
+
+    background:
+        radial-gradient(rgba(115, 91, 59, 0.025) 1px, transparent 1px),
+        linear-gradient(180deg, #fffbed 0%, #fcf3d5 100%);
+
+    background-size: 8px 8px, auto;
+
+    transform: rotate(-1.5deg);
+
+    box-shadow:
+        0 24px 50px rgba(57, 44, 31, 0.12),
+        0 4px 8px rgba(57, 44, 31, 0.05);
+}
+
+.wip-note p {
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 1.8;
+
+    color: #45413d;
+}
+
+.wip-note .come-back {
+    margin-top: 10px;
+    font-weight: 500;
+}
+
+
+/* tape */
+
+.tape {
+    position: absolute;
+
+    width: 95px;
+    height: 28px;
+
+    background: rgba(255, 255, 255, 0.72);
+    border: 1px solid rgba(225, 215, 205, 0.55);
+
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.04);
+}
+
+.tape-left {
+    top: -12px;
+    left: 30px;
+    transform: rotate(-14deg);
+}
+
+.tape-right {
+    top: -12px;
+    right: 30px;
+    transform: rotate(14deg);
+}
+
+
+/* =========================
+   COMING SOON
+========================= */
+
+.coming-soon {
+    margin-top: 60px;
+
+    font-family: "Courier New", monospace;
+    font-size: 13px;
+
+    color: #8b837d;
+}
+
+.cursor {
+    animation: blink 0.9s steps(2, start) infinite;
+}
+
+@keyframes blink {
+    50% {
+        opacity: 0;
+    }
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+  width: 100%;
+  min-height: 130px;
+  padding: 35px 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+  border-top: 1px solid #ececec;
+}
+
+footer > p {
+  font-size: 14px;
+  color: #444;
+}
+
+.footer-info {
+  display: flex;
+  gap: 80px;
+  text-align: center;
+}
+
+.footer-info h4 {
+  margin-bottom: 8px;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.footer-info p {
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.4;
+  color: #555;
+}
+
+.social-icons {
+  display: flex;
+  justify-content: center;
+  gap: 18px;
+}
+
+.social-icons a {
+  font-size: 18px;
+  color: #222;
+  transition: color 0.25s ease, transform 0.25s ease;
+}
+
+.social-icons a:hover {
+  color: #ff5f82;
+  transform: translateY(-2px);
+}
+
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 650px) {
+
+    .navbar {
+        min-height: 76px;
+        padding: 18px 24px;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    nav {
+        position: absolute;
+
+        top: 76px;
+        right: 20px;
+
+        width: 205px;
+        padding: 24px;
+
+        display: none;
+        flex-direction: column;
+        align-items: flex-end;
+        gap: 20px;
+
+        background: #fff;
+
+        border-radius: 0 0 18px 18px;
+
+        box-shadow: 0 18px 35px rgba(0, 0, 0, 0.12);
+    }
+
+    nav.show {
+        display: flex;
+    }
+
+    nav a {
+        font-size: 13px;
+    }
+
+
+    .little-things-page {
+        min-height: auto;
+        padding: 95px 7% 110px;
+    }
+
+    .eyebrow {
+        font-size: 11px;
+        letter-spacing: 3px;
+    }
+
+    .little-things-inner h1 {
+        margin-bottom: 22px;
+
+        font-size: 62px;
+        letter-spacing: -3px;
+    }
+
+    .intro {
+        margin-bottom: 35px;
+        font-size: 17px;
+    }
+
+    .things-list {
+        margin-bottom: 65px;
+    }
+
+    .things-list span {
+        padding: 8px 13px;
+        font-size: 12px;
+    }
+
+    .wip-note {
+        width: 100%;
+        padding: 48px 28px;
+    }
+
+    .wip-note p {
+        font-size: 15px;
+    }
+
+    footer {
+    min-height: auto;
+    padding: 34px 24px;
+    flex-direction: column;
+    gap: 28px;
+    text-align: center;
+  }
+
+  footer > p {
+    font-size: 12px;
+  }
+
+  .footer-info {
+    flex-direction: column;
+    gap: 22px;
+  }
+
+  .footer-info h4,
+  .footer-info p {
+    font-size: 13px;
+  }
+
+}
